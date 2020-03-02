@@ -1,0 +1,29 @@
+{
+  "name": "pixeld",
+  "description": "A daemon to serve empty pixels created solely as an exercise to learn TypeScript.",
+  "keywords": [
+    "pixels",
+    "adtech",
+    "typescript",
+    "express"
+  ],
+  "repository": "https://github.com/vincetse/pixeld",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false",
+    "YARN_PRODUCTION": false
+  },
+  "stack": "heroku-18",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
