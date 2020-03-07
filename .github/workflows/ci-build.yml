@@ -2,6 +2,8 @@ name: CI
 on: [push, pull_request]
 jobs:
   build:
+    name: CI build
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node:
