@@ -29,6 +29,6 @@ describe("GET /image", () => {
   it("should return gif content type", async () => {
     const res = await request(app).get("/image");
     expect(res.header["content-type"]).toBe("image/gif");
-    expect(res.header["content-length"]).toBe("42");
+    expect(res.header["content-length"]).toBe("43");
   });
 });

@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
-import path from "path";
+import { GIF_1x1 } from "./assets.js";
 
 dotenv.config();
 const app = express();
@@ -20,9 +20,11 @@ app.get("/html", (req, res) => {
 });
 
 app.get("/image", (req, res) => {
-  res.set({ "Content-Type": "image/gif" });
-  // Ensure the path is relative to the compiled file or use path.resolve
-  res.sendFile(path.join(__dirname, "../images/1x1.gif"));
+  res.set({
+    "Content-Type": "image/gif",
+    "Content-Length": GIF_1x1.length
+  });
+  res.send(Buffer.from(GIF_1x1));
 });
 
 export default app;
