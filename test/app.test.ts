@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../src/app";
+import app from "../src/app.js";
 
 describe("GET /js", () => {
   it("should return javascript content type", async () => {
