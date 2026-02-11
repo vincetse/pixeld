@@ -1,5 +1,6 @@
-[![Build Status](https://travis-ci.org/vincetse/pixeld.svg?branch=master)](https://travis-ci.org/vincetse/pixeld)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vincetse/pixeld)
+[![CI](https://github.com/vincetse/pixeld/actions/workflows/ci.yml/badge.svg)](https://github.com/vincetse/pixeld/actions/workflows/ci.yml)
+[![Maintainability](https://qlty.sh/gh/vincetse/projects/pixeld/maintainability.svg)](https://qlty.sh/gh/vincetse/projects/pixeld)
+[![Code Coverage](https://qlty.sh/gh/vincetse/projects/pixeld/coverage.svg)](https://qlty.sh/gh/vincetse/projects/pixeld)
 
 # Pixeld
 
