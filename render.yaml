@@ -1,0 +1,15 @@
+services:
+  - type: web
+    runtime: node
+    name: pixeld-service
+    repo: https://github.com/vincetse/pixeld
+    numInstances: 1
+    region: oregon
+    plan: free
+    branch: main
+    autoDeployTrigger: checksPass
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
