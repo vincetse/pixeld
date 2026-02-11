@@ -11,10 +11,15 @@ jobs:
         persist-credentials: false
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
       with:
         node-version: '24.x'
 
     - run: npm ci
 
-    - run: npm test
+    - run: npm test -- --coverage --coverageReporters=json-summary --coverageReporters=lcov
+
+    - uses: qltysh/qlty-action/coverage@a19242102d17e497f437d7466aa01b528537e899 # v2.2.0
+      with:
+        token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+        files: coverage/lcov.info
